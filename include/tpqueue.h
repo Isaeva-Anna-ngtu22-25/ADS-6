@@ -13,15 +13,12 @@ class TPQueue {
     TPQueue():head(0), tail(0), count(0) {
         arr = new T[size];
     }
-    
     ~TPQueue() {
         delete[] arr;
     }
-    
     bool isEmpty() const {
         return count == 0;
     }
-    
     void push(const T& value) {
         if (size != count) {
             int per = tail;
@@ -39,7 +36,6 @@ class TPQueue {
             count++;
         }
     }
-    
     T pop() {
         if (isEmpty()) {
             throw std::string("Empty!");
